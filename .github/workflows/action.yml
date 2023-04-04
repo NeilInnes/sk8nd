@@ -1,0 +1,21 @@
+name: 'Push to IPFS'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      
+jobs:
+  update-serial:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install utils
+        uses: aquiladev/ipfs-action@v0.1.3
+          id: pinata
+          with:
+            path: ./public
+            service: pinata
+            pinName: {PIN_NAME}
+            pinataKey: {PINATA_KEY}
+            pinataSecret: {PINATA_SECRET}
