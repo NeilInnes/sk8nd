@@ -2,9 +2,10 @@
 name: Upload
 
 on:
+  workflow_dispatch: null
   push:
     branches:
-      - master
+      - main
       
 jobs:
   push:
