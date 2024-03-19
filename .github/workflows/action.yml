@@ -14,10 +14,11 @@ jobs:
     
     steps:
       - name: Checkout Files
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Push to Pinata
-        uses: aquiladev/ipfs-action@v0.3.1
+        #uses: aquiladev/ipfs-action@v0.3.1
+        uses: filebase/ipfs-action@a7be7925e1040c4e11b408fc007cb02f8360aefa
         with:
           path: ./public
           service: pinata
